@@ -6,7 +6,6 @@ import java.util.Random;
  * A tile on the game board.
  *
  * @see Board
- * @see Type
  */
 public class Tile {
 
