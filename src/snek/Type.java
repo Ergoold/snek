@@ -7,14 +7,14 @@ import java.awt.*;
  */
 public enum Type {
 
-    EMPTY, HEAD, SNEK, APPLE;
+    EMPTY(Color.BLACK), HEAD(Color.CYAN), SNEK(Color.GREEN), APPLE(Color.RED);
 
-    public Color toColor() {
-        return switch (this) {
-            case EMPTY -> Color.BLACK;
-            case HEAD -> Color.CYAN;
-            case SNEK -> Color.GREEN;
-            case APPLE -> Color.RED;
-        };
+    /**
+     * The color tiles of this type should appear as in the GUI.
+     */
+    public final Color color;
+
+    Type(Color color) {
+        this.color = color;
     }
 }

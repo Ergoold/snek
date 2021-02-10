@@ -74,7 +74,7 @@ public class SnekPane extends JPanel {
         super.paintComponent(g);
         for (int i = 0; i < size; i++)       // rows (y)
             for (int j = 0; j < size; j++) { // cols (x)
-                g.setColor(board.getTile(j, i).toColor());
+                g.setColor(board.getTile(j, i).color);
                 g.fillRect(j * side, i * side, side, side);
             }
     }
