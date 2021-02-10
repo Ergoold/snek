@@ -8,13 +8,31 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+/**
+ * A pane containing a snek game.
+ *
+ * @see Board
+ */
 public class SnekPane extends JPanel {
+
+    /**
+     * The size of the snek game board.
+     */
     public final int size;
 
+    /**
+     * The board that this pane displays.
+     */
     private Board board;
 
+    /**
+     * The side length of each displayed tile, in pixels.
+     */
     public final int side;
 
+    /**
+     * The direction the snek is currently facing.
+     */
     private Direction direction;
 
     public SnekPane(int size, int side, int delay) {

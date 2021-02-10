@@ -2,7 +2,11 @@ package snek.graphics;
 
 import javax.swing.*;
 
+/**
+ * A frame that contains a snek game.
+ */
 public class Gui extends JFrame {
+
     public Gui() {
         this.setTitle("Snek");
         this.setContentPane(new SnekPane(15, 30, 100));

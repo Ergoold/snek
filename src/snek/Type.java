@@ -2,7 +2,11 @@ package snek;
 
 import java.awt.*;
 
+/**
+ * The type of a tile.
+ */
 public enum Type {
+
     EMPTY, HEAD, SNEK, APPLE;
 
     public Color toColor() {

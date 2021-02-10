@@ -2,10 +2,27 @@ package snek;
 
 import java.util.Random;
 
+/**
+ * A tile on the game board.
+ *
+ * @see Board
+ * @see Type
+ */
 public class Tile {
+
+    /**
+     * The {@link Random} variable used to generate random tiles.
+     */
     private static final Random r = new Random();
 
+    /**
+     * The x coordinate of this tile.
+     */
     public int x;
+
+    /**
+     * The y coordinate of this tile.
+     */
     public int y;
 
     public Tile(int x, int y) {
@@ -17,6 +34,11 @@ public class Tile {
         this(tile.x, tile.y);
     }
 
+    /**
+     * Constructs a {@code Tile} with a random coordinate within a board of size {@code size}.
+     *
+     * @param size the size of the board
+     */
     public Tile(int size) {
         this(r.nextInt(size), r.nextInt(size));
     }
