@@ -32,6 +32,14 @@ public class Board {
     }
 
     /**
+     * Generates an apple if one does not already exist.
+     */
+    private void newApple() {
+        while (apple == null || snek.isOn(apple))
+            apple = new Tile(size);
+    }
+
+    /**
      * Moves the snek on this board in {@code direction}.
      *
      * @param direction the direction to move the snek in
@@ -59,14 +67,6 @@ public class Board {
         if (tile.equals(apple))
             return Type.APPLE;
         return Type.EMPTY;
-    }
-
-    /**
-     * Generates an apple if one does not already exist.
-     */
-    private void newApple() {
-        while (apple == null || snek.isOn(apple))
-            apple = new Tile(size);
     }
 
     public int getScore() {
