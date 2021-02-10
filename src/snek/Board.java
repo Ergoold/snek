@@ -28,13 +28,13 @@ public class Board {
     public Board(int size) {
         this.size = size;
         this.snek = new Snek(new Tile(size / 2, size / 2));
-        newApple();
+        generateApple();
     }
 
     /**
      * Generates an apple if one does not already exist.
      */
-    private void newApple() {
+    private void generateApple() {
         while (apple == null || snek.isOn(apple))
             apple = new Tile(size);
     }
@@ -47,7 +47,7 @@ public class Board {
      */
     public boolean moveSnek(Direction direction) {
         if (!snek.move(direction, apple, size)) return false;
-        if (snek.headOn(apple)) newApple();
+        if (snek.headOn(apple)) generateApple();
         return true;
     }
 
